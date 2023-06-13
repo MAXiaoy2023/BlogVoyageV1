@@ -84,13 +84,13 @@ $articleByCategorie = $repoArticle->findAllByCategorie($categorieName);
                 <div class="row rounded p-2">
                 <div class="col"><button type="button" class="btn btn-primary">Poster un article</button></div>
                 </div>
+
                 <div class="col border border-primary p-2 m-2 rounded">
                     <h3>Toutes les catégories</h3>
-                    <p><?= $categorie->getLabel() ?></p>
-                    <p><?= $categorie->getLabel() ?></p>
-                    <p><?= $categorie->getLabel() ?></p>
-                    <p><?= $categorie->getLabel() ?></p>
-                    <p><?= $categorie->getLabel() ?></p>
+                    <?php foreach ($categories as $item) { ?>
+                        <p><?= $item->getLabel() ?></p>
+                    <?php }
+                    ?>
                 </div>
                 <div class="col border border-primary rounded"><h3>Tous les articles</h3>
                 </div>
