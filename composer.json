@@ -1,0 +1,21 @@
+{
+    "name": "xiaoy/blog-voyage",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public"
+    },
+    "authors": [
+        {
+            "name": "MAXiaoy2023",
+            "email": "xiaoyu2009@hotmail.fr"
+        }
+    ],
+    "require": {},
+    "config": {
+        "process-timeout":0
+      }
+}
