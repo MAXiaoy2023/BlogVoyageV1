@@ -26,9 +26,9 @@ CREATE TABLE article (
 );
 
 INSERT INTO article (auteur, datePublication, title, content, image, id_categorie) VALUES
-('Julie', '2023-06-12','Voyage à Paris','Notre-Dame, le Louvre, la tour Eiffel, les Invalides, la place de la Concorde, le Sacré-Cœur sur la butte Montmartre…', 'https://www.shutterstock.com/fr/image-photo/beautiful-panorama-paris-skyline-1079825693',1),
-('Kate', '2023-06-12','Voyage à Rome','La ville se situe le long du fleuve Tibre et a été construite sur sept collines, nommées le Palatin, le Capitole, le Cælius, le Quirinal et le Viminal.', 'https://www.shutterstock.com/fr/image-photo/basilica-sagrada-familia-barcelona-2024563775',1),
-('Thomas', '2023-06-13','Voyage à Barcelone','La capitale catalane brille par sa culture, son architecture, son climat, sa gastronomie, sa mythique équipe de football et, surtout, sa bonne humeur.', 'https://www.shutterstock.com/fr/image-photo/piazza-di-spagna-rome-italy-spanish-1439825942',1);
+('Julie', '2023-06-12','Voyage à Paris','Notre-Dame, le Louvre, la tour Eiffel, les Invalides, la place de la Concorde, le Sacré-Cœur sur la butte Montmartre…', 'https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg',1),
+('Kate', '2023-06-12','Voyage à Rome','La ville se situe le long du fleuve Tibre et a été construite sur sept collines, nommées le Palatin, le Capitole, le Cælius, le Quirinal et le Viminal.', 'https://img.freepik.com/photos-gratuite/texture-mur-stuc-bleu-marine-relief-decoratif-abstrait-grunge-fond-colore-rugueux-grand-angle_1258-28311.jpg',1),
+('Thomas', '2023-06-13','Voyage à Barcelone','La capitale catalane brille par sa culture, son architecture, son climat, sa gastronomie, sa mythique équipe de football et, surtout, sa bonne humeur.', 'https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg',1);
 
 --SELECT * FROM article;
 
