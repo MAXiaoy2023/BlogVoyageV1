@@ -17,9 +17,8 @@ $categories = $repository->findAll();
 $categorie = $repository->findById(5);
 //var_dump($categorie);
 
-$toPersist = new Categorie(10, 'Voyage Amerique du Nord');
-
-$repository->persist($toPersist);
+//$toPersist = new Categorie(10, 'Voyage Amerique du Nord');
+//$repository->persist($toPersist);
 //var_dump($toPersist);
 
 $categories = $repository->findAll();
@@ -28,8 +27,8 @@ $categories = $repository->findAll();
 
 /* Commentaire */
 $repoComm = new CommentaireRepository();
-$toPersistComm = new Commentaire(11, 'Laurent', 'test Laurent', '2023-06-13', 1);
-$repoComm->persist($toPersistComm);
+//$toPersistComm = new Commentaire(11, 'Laurent', 'test Laurent', '2023-06-13', 1);
+//$repoComm->persist($toPersistComm);
 //var_dump('Test commentaire');
 
 $commentaires = $repoComm->findAll();
@@ -38,8 +37,8 @@ $commentaires = $repoComm->findAll();
 
 /* Article */ 
 $repoArticle = new ArticleRepository();
-$toPersistArticle = new Article(1, 'Julia', '2023-06-13', "Voyage PEK", "test Julia", "http://testJulia", 2);
-$repoArticle->persist($toPersistArticle);
+//$toPersistArticle = new Article(1, 'Julia', '2023-06-13', "Voyage PEK", "test Julia", "http://testJulia", 2);
+//$repoArticle->persist($toPersistArticle);
 //var_dump('Test Article');
 
 $categorieName = 'Voyage en Europe';
