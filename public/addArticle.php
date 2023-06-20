@@ -120,34 +120,24 @@ $articleByCategorieEurope = $repoArticleEurope->findAllByCategorie($categorieNam
                 <div class="row text-center">
                     <form name="form1" action="pageArticle.php" method="post">
                         <div class="form-group">
-                            <input type="int" class="form-control" name="id" placeholder="Ajouter l'ID">
-                        </div>    
-                        
-                        <div class="form-group">
                             <input type="text" class="form-control" name="auteur" placeholder="Ajouter le nom de l'auteur">
                         </div>
-
                         <div class="form-group">
                             <input type="text" class="form-control" name="datePublication" placeholder="Ajouter une date">
                         </div>
-
                         <div class="form-group">
                             <input type="text" class="form-control" name="titre" placeholder="Ajouter un titre">
                         </div>
-
                         <div class="form-group">
                             <input type="text" class="form-control" name="content" placeholder="Rédiger votre content">
                         </div>
-
                         <div class="form-group">
                             <input type="text" class="form-control" name="image" placeholder="Ajouter une image">
                         </div>
-
                         <div class="form-group">
                             <input type="int" class="form-control" name="id_categorie" placeholder="Ajouter un continent">
                         </div>
-
-                        <button type="submit" name="persist" class="btn btn-primary">Submit</button>
+                        <button type="submit" name="persist" class="btn btn-primary">Valider</button>
                     </form>
                 </div>            
         </div>
