@@ -6,17 +6,17 @@ class Article {
     private ?int $id;
     private string $auteur;
     private string $datePublication;
-    private string $title;
+    private string $titre;
     private string $content;
     private string $image;
     private int $id_categorie;
 
-    public function __construct(int $id, string $auteur, string $datePublication, string $title, string $content, string $image, int $id_categorie)
+    public function __construct(int $id, string $auteur, string $datePublication, string $titre, string $content, string $image, int $id_categorie)
     {
         $this->id = $id;
         $this->auteur = $auteur;
         $this->datePublication = $datePublication;
-        $this->title = $title;
+        $this->titre = $titre;
         $this->content = $content;
         $this->image = $image;
         $this->id_categorie = $id_categorie;
@@ -105,16 +105,16 @@ class Article {
 	/**
 	 * @return 
 	 */
-	public function getTitle(): string {
-		return $this->title;
+	public function getTitre(): string {
+		return $this->titre;
 	}
 	
 	/**
-	 * @param  $title 
+	 * @param  $titre 
 	 * @return self
 	 */
-	public function setTitle(string $title): self {
-		$this->title = $title;
+	public function setTitre(string $titre): self {
+		$this->titre = $titre;
 		return $this;
 	}
 

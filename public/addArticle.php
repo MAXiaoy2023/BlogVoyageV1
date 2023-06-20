@@ -116,27 +116,40 @@ $articleByCategorieEurope = $repoArticleEurope->findAllByCategorie($categorieNam
                     ?>
                 </div>
         </div>
-        <div class="col col-lg-9">
+        <div class="col col-lg-9 border border-primary rounded p-2">
                 <div class="row text-center">
-                    <h2 class="text-success">Guide voyage</h2></div>
-                <div class="row text-center">
-                    <?php foreach ($categorie as $item) { ?>    
-                        <h3><?= $item->getLabel() ?></h3>
-                    <?php } ?>
-                </div>
-                <div class="row g-3">
-                    <?php foreach ($articleByCategorieEurope as $item) { ?>
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">                            
-                            <img src="<?= $item->getImage()?>" class="card-img-top" alt="..."><div class="card-body">
-                            <h4 class="card-title"><?= $item->getTitre() ?></h4>
-                                <p class="card-text"><?= $item->getContent() ?></p>
-                                <a href="#" class="btn btn-primary">Accéder à ce guide voyage</a>
-                            </div>
+                    <form name="form1" action="pageArticle.php" method="post">
+                        <div class="form-group">
+                            <input type="int" class="form-control" name="id" placeholder="Ajouter l'ID">
+                        </div>    
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="auteur" placeholder="Ajouter le nom de l'auteur">
                         </div>
-                    </div>
-                    <?php } ?>
-                </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="datePublication" placeholder="Ajouter une date">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="titre" placeholder="Ajouter un titre">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="content" placeholder="Rédiger votre content">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="image" placeholder="Ajouter une image">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="int" class="form-control" name="id_categorie" placeholder="Ajouter un continent">
+                        </div>
+
+                        <button type="submit" name="persist" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>            
         </div>
         <div class="row border border-primary mt-2">
             <footer>

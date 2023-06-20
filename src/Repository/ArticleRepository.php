@@ -12,7 +12,7 @@ class ArticleRepository {
                                 VALUES (:auteur, :datePublication, :title, :content, :image, :id_categorie)");
         $query->bindValue(':auteur', $article->getAuteur());
         $query->bindValue(':datePublication', $article->getDatePublication());
-        $query->bindValue(':title', $article->getTitle());
+        $query->bindValue(':title', $article->getTitre());
         $query->bindValue(':content', $article->getContent());
         $query->bindValue(':image', $article->getImage());
         $query->bindValue(':id_categorie', $article->getId_categorie());

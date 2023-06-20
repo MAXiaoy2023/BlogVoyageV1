@@ -52,6 +52,45 @@ $repoArticleEurope = new ArticleRepository();
 $categorieNameEurope = 'Voyage en Europe';
 $articleByCategorieEurope = $repoArticleEurope->findAllByCategorie($categorieNameEurope);
 
+if(isset($_POST['persist'])) {
+    $auteur = $_POST['auteur'];
+    // var_dump($auteur);
+
+    $datePublication = $_POST['datePublication'];
+    // var_dump($datePublication);
+
+    $title = $_POST['titre'];
+    // var_dump($title);
+    
+    $content = $_POST['content'];
+    // var_dump($content);
+    
+    $image = $_POST['image'];
+    // var_dump($image);
+    
+    $id_categorie = $_POST['id_categorie'];
+    // var_dump($id_categorie);
+    
+    $article = new Article(10, $auteur, $datePublication, $title, 
+                            $content, $image, $id_categorie);
+
+    $articleRepoGlobal = new ArticleRepository();
+    $articleRepoGlobal->persist($article);
+
+    // $connection = new \PDO("mysql:host=localhost;dbname=blog_db", "root", "1234");
+    // $sql = "INSERT INTO article (auteur, datePublication, title, content, image, id_categorie) 
+    //                 VALUES ('$auteur', '$datePublication', '$title', '$content', '$image', '$id_categorie')";
+
+    // try {
+    //     $connection->query($sql);
+    //     echo "Succès";
+    // } catch (PDOException $e) {
+    //     echo "Echec - ", $e->getMessage();
+    // }
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -118,20 +157,14 @@ $articleByCategorieEurope = $repoArticleEurope->findAllByCategorie($categorieNam
         </div>
         <div class="col col-lg-9">
                 <div class="row text-center">
-                    <h2 class="text-success">Guide voyage</h2></div>
-                <div class="row text-center">
-                    <?php foreach ($categorie as $item) { ?>    
-                        <h3><?= $item->getLabel() ?></h3>
-                    <?php } ?>
-                </div>
-                <div class="row g-3">
+                    <h2 class="text-success"><?= $item->getTitre() ?></h2></div>
+                <div class="row">
                     <?php foreach ($articleByCategorieEurope as $item) { ?>
-                    <div class="col-md-4">
+                    <div class="col">
                         <div class="card" style="width: 18rem;">                            
                             <img src="<?= $item->getImage()?>" class="card-img-top" alt="..."><div class="card-body">
                             <h4 class="card-title"><?= $item->getTitre() ?></h4>
                                 <p class="card-text"><?= $item->getContent() ?></p>
-                                <a href="#" class="btn btn-primary">Accéder à ce guide voyage</a>
                             </div>
                         </div>
                     </div>
